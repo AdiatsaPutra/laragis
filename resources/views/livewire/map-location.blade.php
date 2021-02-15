@@ -11,13 +11,13 @@
                             <div class="col-sm-6">
                                 <div class="mb-3">
                                     <label for="lattitude" class="form-label">Lattitude</label>
-                                    <input type="text" class="form-control" id="lattitude">
+                                    <input wire:model="lat" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="mb-3">
                                     <label for="longtitude" class="form-label">Longtitude</label>
-                                    <input type="password" class="form-control" id="longtitude">
+                                    <input wire:model="long" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                     <h4 class="card-title">Form</h4>
                 </div>
                 <div class="card-body">
-                    <div wire:ignone id='map' style='width: 100%; height: 80vh;'></div>
+                    <div id='map' style='width: 100%; height: 80vh;'></div>
                 </div>
             </div>
         </div>
@@ -41,36 +41,36 @@
 @push('scripts')
 <script>
     // Add Event Listeners Untuk Memastikan Document Terload Terlebih Dahulu
-    document.addEventListener('livewire:load', () => {
-        const defaultLocation = ['110.32743040296015', '-7.887912013104355'];
+    const defaultLocation = ['110.32421282372133', '-7.883797287020698'];
 
     // Initialize Mapbox View
-    mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
+    mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
     var map = new mapboxgl.Map({
         container: 'map',
         center: defaultLocation,
-        zoom: 20,
+        zoom: 15,
+        
     });
 
-    // Styling Mapbox Map
-    const lightMapView = 'light-v10';
-    const darkView = 'light-v10';
-    const outdoorsMapView = 'outdoors-v11';
-    const satelliteView = 'satellite-v9';
-    const defaultMapView = 'streets-v11';
 
-    map.setStyle(`mapbox://styles/mapbox/${satelliteView}`);
+    map.setStyle('mapbox://styles/mapbox/light-v10');
 
     // Add Map Controller
-    map.addControl(new mapboxgl.NavigationControl())
+    map.addControl(new mapboxgl.NavigationControl());
 
     // Get Default Location
-    map.on('click', (e) => {
-        const longtitude = e.lngLat.lng;
-        const lattitude = e.lngLat.lat;
+            map.on('click', function(e) {
+                const latittude = e.lngLat.lat;
+                const longitude = e.lngLat.lng;
 
-        console.log(longtitude, lattitude);
-        });
-    });
+                @this.lat = latittude;
+                @this.long = longitude;
+
+                // var coordinates = e.lngLat;
+                // new mapboxgl.Popup()
+                // .setLngLat(coordinates)
+                // .setHTML('you clicked here: <br/>' + coordinates)
+                // .addTo(map);
+            });
 </script>
 @endpush
