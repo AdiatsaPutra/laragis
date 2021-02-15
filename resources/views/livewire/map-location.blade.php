@@ -40,7 +40,9 @@
 
 @push('scripts')
 <script>
-    const defaultLocation = ['110.32743040296015', '-7.887912013104355'];
+    // Add Event Listeners Untuk Memastikan Document Terload Terlebih Dahulu
+    document.addEventListener('livewire:load', () => {
+        const defaultLocation = ['110.32743040296015', '-7.887912013104355'];
 
     // Initialize Mapbox View
     mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
@@ -68,6 +70,7 @@
         const lattitude = e.lngLat.lat;
 
         console.log(longtitude, lattitude);
+        });
     });
 </script>
 @endpush
