@@ -40,8 +40,8 @@
 
 @push('scripts')
 <script>
-    // Add Event Listeners Untuk Memastikan Document Terload Terlebih Dahulu
-    const defaultLocation = ['110.32421282372133', '-7.883797287020698'];
+    // Default Lokasi Map
+    const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
 
     // Initialize Mapbox View
     mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
@@ -52,25 +52,19 @@
         
     });
 
-
-    map.setStyle('mapbox://styles/mapbox/light-v10');
+    // Set Map Style
+    map.setStyle('mapbox://styles/mapbox/dark-v10');
 
     // Add Map Controller
     map.addControl(new mapboxgl.NavigationControl());
 
-    // Get Default Location
-            map.on('click', function(e) {
-                const latittude = e.lngLat.lat;
-                const longitude = e.lngLat.lng;
+    // Get Latittude Longitude
+    map.on('click', function(e) {
+        const latittude = e.lngLat.lat;
+        const longitude = e.lngLat.lng;
 
-                @this.lat = latittude;
-                @this.long = longitude;
-
-                // var coordinates = e.lngLat;
-                // new mapboxgl.Popup()
-                // .setLngLat(coordinates)
-                // .setHTML('you clicked here: <br/>' + coordinates)
-                // .addTo(map);
-            });
+        @this.lat = latittude;
+        @this.long = longitude;
+    });
 </script>
 @endpush
