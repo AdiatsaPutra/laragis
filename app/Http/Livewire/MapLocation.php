@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class MapLocation extends Component
 {
-    public $long, $lat;
+    public $long, $lat, $tgl;
 
     public function render()
     {

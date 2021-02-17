@@ -1,39 +1,70 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 mb-5">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Form</h4>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="mb-3">
-                                    <label for="lattitude" class="form-label">Lattitude</label>
-                                    <input wire:model="lat" type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="mb-3">
-                                    <label for="longtitude" class="form-label">Longtitude</label>
-                                    <input wire:model="long" type="text" class="form-control">
-                                </div>
-                            </div>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-1">
+                            <label for="lattitude" class="form-label">Lattitude</label>
+                            <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan Lattitude">
                         </div>
-                    </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Longtitude</label>
+                            <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Nama Lokasi</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Jenis Lokasi</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">PIC 1</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">PIC 2</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Nomor Telepon</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Nama Surveyor</label>
+                            <input wire:model="long" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="mb-1">
+                            <label for="longtitude" class="form-label">Tanggal Disurvey</label>
+                            <input wire:model="tgl" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <button class="btn btn-primary btn-block mt-3" type="button">Button</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Form</h4>
-                </div>
-                <div class="card-body">
-                    <div id='map' style='width: 100%; height: 80vh;'></div>
-                </div>
-            </div>
+            <div id='map' style='width: 100%; height: 80vh;'></div>
         </div>
     </div>
 </div>
@@ -65,6 +96,25 @@
 
         @this.lat = latittude;
         @this.long = longitude;
+    });
+
+    // Get Date Now
+    arrbulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    date = new Date();
+    millisecond = date.getMilliseconds();
+    detik = date.getSeconds();
+    menit = date.getMinutes();
+    jam = date.getHours();
+    hari = date.getDay();
+    tanggal = date.getDate();
+    bulan = date.getMonth();
+    tahun = date.getFullYear();
+
+    // Fill Date Field
+    window.addEventListener('load', function() {
+    const tanggalFormatted = tanggal+" "+arrbulan[bulan]+" "+tahun;
+    console.log(tanggalFormatted);
+    @this.tgl = tanggalFormatted;
     });
 </script>
 @endpush
