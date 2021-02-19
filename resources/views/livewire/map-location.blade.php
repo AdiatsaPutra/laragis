@@ -18,47 +18,52 @@
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Nama Lokasi</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control"
+                                placeholder=" Masukan Nama lokasi">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Jenis Lokasi</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control"
+                                placeholder=" Masukan Jenis Lokasi">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">PIC 1</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control" placeholder=" Masukan PIC 1">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">PIC 2</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control" placeholder=" Masukan PIC 2">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Nomor Telepon</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control"
+                                placeholder=" Masukan Nomor Telepon">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Nama Surveyor</label>
-                            <input wire:model="long" type="text" class="form-control">
+                            <input wire:model="long" type="text" class="form-control"
+                                placeholder=" Masukan Nama Surveyor">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Tanggal Disurvey</label>
-                            <input wire:model="tgl" type="text" class="form-control">
+                            <input wire:model="tgl" type="date" class="form-control"
+                                placeholder=" Masukan Tanggal Disurvey">
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary btn-block mt-3" type="button">Button</button>
+                        <button class="btn btn-primary btn-block mt-3" type="button">Submit</button>
                     </div>
                 </div>
             </form>
@@ -84,7 +89,7 @@
     });
 
     // Set Map Style
-    map.setStyle('mapbox://styles/mapbox/dark-v10');
+    map.setStyle('mapbox://styles/mapbox/light-v10');
 
     // Add Map Controller
     map.addControl(new mapboxgl.NavigationControl());
