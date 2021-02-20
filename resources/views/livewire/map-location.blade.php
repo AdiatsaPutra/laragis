@@ -1,4 +1,17 @@
-<div class="container-fluid">
+<div class="container">
+    <div class="d-flex flex-row-reverse mb-1">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-4 mb-5">
             <form>
@@ -58,8 +71,7 @@
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label for="longtitude" class="form-label">Tanggal Disurvey</label>
-                            <input wire:model="tgl" type="date" class="form-control"
-                                placeholder=" Masukan Tanggal Disurvey">
+                            <input wire:model="tgl" type="date" class="form-control">
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -101,25 +113,6 @@
 
         @this.lat = latittude;
         @this.long = longitude;
-    });
-
-    // Get Date Now
-    arrbulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-    date = new Date();
-    millisecond = date.getMilliseconds();
-    detik = date.getSeconds();
-    menit = date.getMinutes();
-    jam = date.getHours();
-    hari = date.getDay();
-    tanggal = date.getDate();
-    bulan = date.getMonth();
-    tahun = date.getFullYear();
-
-    // Fill Date Field
-    window.addEventListener('load', function() {
-    const tanggalFormatted = tanggal+" "+arrbulan[bulan]+" "+tahun;
-    console.log(tanggalFormatted);
-    @this.tgl = tanggalFormatted;
     });
 </script>
 @endpush
