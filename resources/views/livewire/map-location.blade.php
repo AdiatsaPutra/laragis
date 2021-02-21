@@ -141,19 +141,24 @@
         }]
     };
 
-    // add markers to map
-    geojson.features.forEach(function(marker) {
+    // Add Marker
+    const addMarkers = () => {
+        // add markers to map
+        geojson.features.forEach(function(marker) {
 
-    // create a marker
-    var el = document.createElement('div');
-    el.className = 'marker';
+        // Create a marker
+        var el = document.createElement('div');
+        el.className = 'marker';
 
-    // make a marker for each feature and add to the map
-    new mapboxgl.Marker(el)
-    .setLngLat(defaultLocation)
-    .addTo(map);
-    });
+        // Add to the map
+        new mapboxgl.Marker(el)
+        .setLngLat(defaultLocation)
+        .addTo(map);
 
+        });
+    }
+
+    addMarkers()
 
 </script>
 @endpush
