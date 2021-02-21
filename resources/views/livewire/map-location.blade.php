@@ -114,5 +114,46 @@
         @this.lat = latittude;
         @this.long = longitude;
     });
+
+    var geojson = {
+        type: 'FeatureCollection',
+        features: [{
+            type: 'Feature',
+            geometry: {
+            type: 'Point',
+            coordinates: [-77.032, 38.913]
+            },
+            properties: {
+            title: 'Mapbox',
+            description: 'Washington, D.C.'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+            type: 'Point',
+            coordinates: [-122.414, 37.776]
+            },
+            properties: {
+            title: 'Mapbox',
+            description: 'San Francisco, California'
+            }
+        }]
+    };
+
+    // add markers to map
+    geojson.features.forEach(function(marker) {
+
+    // create a marker
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+    .setLngLat(defaultLocation)
+    .addTo(map);
+    });
+
+
 </script>
 @endpush
