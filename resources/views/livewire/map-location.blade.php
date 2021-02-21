@@ -1,17 +1,4 @@
 <div class="container">
-  <div class="d-flex flex-row-reverse mb-1">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-4 mb-5">
       <form>
@@ -59,10 +46,17 @@
             </div>
           </div>
           <div class="col-sm-12">
+            @guest
+            @if (Route::has('login'))
+            @endif
+            @if (Route::has('register'))
+            @endif
+            @else
             <div class="mb-1">
               <label for="longtitude" class="form-label">Nama Surveyor</label>
-              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan Nama Surveyor">
+              <input type="text" class="form-control" value="{{ Auth::user()->name }}">
             </div>
+            @endguest
           </div>
           <div class="col-sm-12">
             <div class="mb-1">
@@ -85,7 +79,7 @@
 @push('scripts')
 <script>
   // Default Lokasi Map
-    const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
+    const defaultLocation = ['110.36812528969239', '-7.824875284888151'];
 
     // Initialize Mapbox View
     mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
