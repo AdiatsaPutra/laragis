@@ -245,10 +245,8 @@
     // Add Marker
     const addMarkers = () => {
         geoJson.features.forEach((location) => {
-            const {geometry, properties} = location;
-            console.log(location);
+        const {geometry, properties} = location;
         const {message, iconSize, locationId, title, image, description} = properties;
-        // add markers to map
 
         // Create a marker
         var el = document.createElement('div');
