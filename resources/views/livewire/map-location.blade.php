@@ -259,6 +259,7 @@
         });
     }
 
+    // Call Add Markers
     addMarkers()
 
 </script>
