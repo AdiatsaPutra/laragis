@@ -79,7 +79,7 @@
 @push('scripts')
 <script>
   // Default Lokasi Map
-    const defaultLocation = ['110.36812528969239', '-7.824875284888151'];
+    const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
 
     // Initialize Mapbox View
     mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';

@@ -89,6 +89,7 @@
 
         <main class="py-4">
             @yield('content')
+            {{ isset($slot) ? $slot : null }}
         </main>
     </div>
 
