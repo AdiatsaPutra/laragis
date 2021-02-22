@@ -23,28 +23,59 @@
           </div>
           <div class="col-sm-12">
             <div class="mb-1">
-              <label for="longtitude" class="form-label">Jenis Lokasi</label>
+              <label for="longtitude" class="form-label">Kategori</label>
               <input wire:model="long" type="text" class="form-control" placeholder=" Masukan Jenis Lokasi">
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-6">
             <div class="mb-1">
-              <label for="longtitude" class="form-label">PIC 1</label>
-              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan PIC 1">
+              <label for="lattitude" class="form-label">RT</label>
+              <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan RT">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">RW</label>
+              <input wire:model="long" type="text" class="form-control" placeholder="Masukkan RW">
             </div>
           </div>
           <div class="col-sm-12">
             <div class="mb-1">
-              <label for="longtitude" class="form-label">PIC 2</label>
-              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan PIC 2">
+              <label for="longtitude" class="form-label">Kelurahan</label>
+              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan Kelurahan">
             </div>
           </div>
           <div class="col-sm-12">
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">Kecamatan</label>
+              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan Kecamatan">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="lattitude" class="form-label">PIC 1</label>
+              <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan PIC 1">
+            </div>
+          </div>
+          <div class="col-sm-6">
             <div class="mb-1">
               <label for="longtitude" class="form-label">Nomor Telepon</label>
-              <input wire:model="long" type="text" class="form-control" placeholder=" Masukan Nomor Telepon">
+              <input wire:model="long" type="text" class="form-control" placeholder="Masukan No Telepon">
             </div>
           </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="lattitude" class="form-label">PIC 2</label>
+              <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan PIC 2">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">Nomor Telepon</label>
+              <input wire:model="long" type="text" class="form-control" placeholder="Masukan No Telepon">
+            </div>
+          </div>
+        
           <div class="col-sm-12">
             @guest
             @if (Route::has('login'))
@@ -256,6 +287,7 @@
         .setLngLat(defaultLocation)
         .addTo(map);
 
+        
         });
     }
 
@@ -264,3 +296,4 @@
 
 </script>
 @endpush
+
