@@ -22,7 +22,9 @@
       <h1>SELAMAT DATANG</h1>
       <p class="lead">Segera buat akun anda dan daftarkan ke aplikasi untuk
         menggunakan serta menikmati fitur yang tersedia</p>
-      <button type="button" class="btn btn-primary">DAFTARKAN SEKARANG</button>
+      <a type="button" class="btn btn-primary" href="{{ route('register') }}">DAFTARKAN SEKARANG</a><br><br>
+      <p class="lead">Sudah Punya Akun?</p>
+      <a type="button" class="btn btn-primary" href="{{ route('login') }}">Login</a><br><br>
     </div>
   </div>
 
