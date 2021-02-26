@@ -5,7 +5,7 @@
 <div class="container" style="overflow-x:auto;">
   <table>
     <tr>
-      <th>First Name</th>
+      <th>Lattitude</th>
       <th>Last Name</th>
       <th>Points</th>
       <th>Points</th>
