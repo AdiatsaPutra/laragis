@@ -1,3 +1,7 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 .jumbotron{
     margin-top: -50px !important;
     padding: 80px 0px 0px 0px;

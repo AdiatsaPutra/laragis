@@ -2,118 +2,116 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 mb-5">
-            <form>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label for="lattitude" class="form-label">Lattitude</label>
-                            <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan Lattitude"
-                                id="lat">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label for="longtitude" class="form-label">Longtitude</label>
-                            <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude"
-                                id="lng">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-1">
-                            <label class="form-label">Nama Lokasi</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Nama lokasi">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-1">
-                            <label class="form-label">Kategori</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Jenis Lokasi">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">RT</label>
-                            <input type="text" class="form-control" placeholder="Masukkan RT">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">RW</label>
-                            <input type="text" class="form-control" placeholder="Masukkan RW">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-1">
-                            <label class="form-label">Kelurahan</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Kelurahan">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-1">
-                            <label class="form-label">Kecamatan</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Kecamatan">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">PIC 1</label>
-                            <input type="text" class="form-control" placeholder="Masukkan PIC 1">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">Nomor Telepon</label>
-                            <input type="text" class="form-control" placeholder="Masukan No Telepon">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">PIC 2</label>
-                            <input type="text" class="form-control" placeholder="Masukkan PIC 2">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="mb-1">
-                            <label class="form-label">Nomor Telepon</label>
-                            <input type="text" class="form-control" placeholder="Masukan No Telepon">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        @guest
-                        @if (Route::has('login'))
-                        @endif
-                        @if (Route::has('register'))
-                        @endif
-                        @else
-                        <div class="mb-1">
-                            <label for="longtitude" class="form-label">Nama Surveyor</label>
-                            <input type="text" class="form-control" value="{{ Auth::user()->name }}">
-                        </div>
-                        @endguest
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-1">
-                            <label for="longtitude" class="form-label">Tanggal Disurvey</label>
-                            <input wire:model="tgl" type="date" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <button class="btn btn-primary btn-block mt-3" type="button">Submit</button>
-                    </div>
-                </div>
-            </form>
+  <div class="row">
+    <div class="col-md-4 mb-5">
+      <form>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="lattitude" class="form-label">Lattitude</label>
+              <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan Lattitude" id="lat">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">Longtitude</label>
+              <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude" id="lng">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label class="form-label">Nama Lokasi</label>
+              <input type="text" class="form-control" placeholder=" Masukan Nama lokasi">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label class="form-label">Kategori</label>
+              <input type="text" class="form-control" placeholder=" Masukan Jenis Lokasi">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">RT</label>
+              <input type="text" class="form-control" placeholder="Masukkan RT">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">RW</label>
+              <input type="text" class="form-control" placeholder="Masukkan RW">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label class="form-label">Kelurahan</label>
+              <input type="text" class="form-control" placeholder=" Masukan Kelurahan">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label class="form-label">Kecamatan</label>
+              <input type="text" class="form-control" placeholder=" Masukan Kecamatan">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">PIC 1</label>
+              <input type="text" class="form-control" placeholder="Masukkan PIC 1">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">Telepon</label>
+              <input type="text" class="form-control" placeholder="Masukan Telepon">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">PIC 2</label>
+              <input type="text" class="form-control" placeholder="Masukkan PIC 2">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mb-1">
+              <label class="form-label">Telepon</label>
+              <input type="text" class="form-control" placeholder="Masukan Telepon">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            @guest
+            @if (Route::has('login'))
+            @endif
+            @if (Route::has('register'))
+            @endif
+            @else
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">Nama Surveyor</label>
+              <input type="text" class="form-control" value="{{ Auth::user()->name }}">
+            </div>
+            @endguest
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label for="longtitude" class="form-label">Tanggal Disurvey</label>
+              <input type="text" class="form-control" id="tgl">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <button class="btn btn-primary btn-block mt-3" type="button">Submit</button>
+          </div>
         </div>
-        <div class="col-md-8">
-            <div id='map' style='width: 100%; height: 80vh;'></div>
-        </div>
+      </form>
     </div>
+    <div class="col-md-8">
+      <div id='map' style='width: 100%; height: 80vh;'></div>
+    </div>
+  </div>
 </div>
 
 @push('scripts')
 <script>
-    // Default Lokasi Map
+  // Default Lokasi Map
       const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
   
       // Initialize Mapbox View
@@ -297,7 +295,17 @@
       }
   
       // Call Add Markers
-      addMarkers()
+      addMarkers();
+
+      date = new Date();
+      hari = date.getDay();
+      tanggal = date.getDate();
+      bulan = date.getMonth();
+      tahun = date.getFullYear();
+      hariIndonesia = ["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"];
+      bulanIndonesia = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+      var formattedTanggal = hariIndonesia[hari] + ', ' + tanggal + ' ' + bulanIndonesia[bulan] + ' ' + tahun;
+      document.getElementById('tgl').value = formattedTanggal;
   
 </script>
 @endpush
