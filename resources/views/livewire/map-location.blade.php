@@ -94,6 +94,21 @@
               <input wire:model="tgl" type="date" class="form-control">
             </div>
           </div>
+          <div class="form-group">
+            <label class="text-white">Image</label>
+                <div class="custom-file dark-input">
+                <input wire:model="image" type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label dark-input" for="customFile">Choose file</label>
+                </div>
+            <label class="text-white">Picture of Location</label>
+            @error('image') <small class="text-danger">{{$message}}</small>@enderror
+            @if($image)
+                <img src="{{$image->temporaryUrl()}}" class="img-fluid" alt="Preview Image">
+            @endif
+            @if($imageUrl && !$image)                                
+                <img src="{{asset('/storage/images/'.$imageUrl)}}" class="img-fluid" alt="Preview Image">
+            @endif     
+        </div>
           <div class="col-sm-12">
             <button class="btn btn-primary btn-block mt-3" type="button">Submit</button>
           </div>

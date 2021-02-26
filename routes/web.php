@@ -2,7 +2,7 @@
 
 use App\Http\Livewire\MapLocation;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/map', MapLocation::class);
 
+Route::get('/datatable',[HomeController::class,'table']);

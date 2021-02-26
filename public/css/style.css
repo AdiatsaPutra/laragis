@@ -1,3 +1,7 @@
+*{margin: 0;
+padding: 0;
+}
+
 .jumbotron{
     margin-top: -50px !important;
     padding: 80px 0px 0px 0px;
@@ -17,16 +21,26 @@
     .jumbotron{
         margin-top: -100px !important;
         padding: 300px 0px 0px 0px;
-        height: 800px;
+        height: 900px;
         background-image: url('https://images.unsplash.com/photo-1557691213-8cbf9866d933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
         background-size: cover;
         background-repeat: no-repeat;
         color: white;
         text-align: start;
+        margin-bottom: 0px;
     }
 
     .logo{
         width: 150px;
     }
 
+   footer{
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+   }
+    
 }
