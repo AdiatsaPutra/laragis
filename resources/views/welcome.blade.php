@@ -20,6 +20,7 @@
         <a class="text-white" href="{{ route('login') }}">Login</a>
       </div>
     </nav>
+
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="font-weight-bold">SELAMAT DATANG</h1>
@@ -28,6 +29,26 @@
         <a type="button" class="btn btn-primary" href="{{ route('register') }}">DAFTARKAN SEKARANG</a><br><br>
       </div>
     </div>
+
+    <footer class="bg-dark text-white text-md-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="">
+            <div id="footer">
+              <img class="logo" src="{{ asset('img/logo.png') }}">
+              <h5 class="">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
+                55143</h5>
+              <p>Telp : (0274) 6055655</p>
+              <p>WA Area Jogja : 00000000000</p>
+              <p>Email : Cs@LifeMedia.id </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <a class="text-white">Build With Love by UMY Intern Team</a>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
