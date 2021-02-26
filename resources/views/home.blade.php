@@ -86,8 +86,7 @@
             @endif
             @else
             <div class="mb-1">
-              <label for="longtitude" class="form-label">Nama Surveyor</label>
-              <input type="text" class="form-control" value="{{ Auth::user()->name }}">
+              <input type="hidden" class="form-control" value="{{ Auth::user()->name }}">
             </div>
             @endguest
           </div>

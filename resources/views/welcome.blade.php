@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <footer class="bg-dark text-white text-md-start">
+    <footer class="footer bg-dark text-white text-md-start">
       <div class="container p-4">
         <div class="row">
           <div class="">

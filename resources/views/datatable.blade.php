@@ -2,34 +2,236 @@
 
 @section('content')
 
-<table class="table">
+<div class="table-responsive">
+  <table class="table table-striped table-hover table-condensed">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Address</th>
+        <th class="text-center">City</th>
+        <th class="text-center">State</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
+        <th class="text-center">Zip</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
   </table>
+  <div class="bodycontainer scrollable">
+    <table class="table table-hover table-striped table-condensed table-scrollable">
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <table class="table table-hover table-striped table-condensed">
+    <tfoot>
+      <!-- add your footer here... -->
+    </tfoot>
+  </table>
+</div>
 @endsection
