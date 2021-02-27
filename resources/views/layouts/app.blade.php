@@ -72,8 +72,8 @@
                         <div class="">
                             <div id="footer">
                                 <img class="logo" src="{{ asset('img/logo.png') }}">
-                                <h5 class="">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
-                                    55143</h5>
+                                <p class="">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
+                                    55143</p>
                                 <p>Telp : (0274) 6055655</p>
                                 <p>WA Area Jogja : 00000000000</p>
                                 <p>Email : Cs@LifeMedia.id </p>
