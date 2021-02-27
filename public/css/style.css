@@ -31,6 +31,27 @@ table {
   
   tr:nth-child(even){background-color: #f2f2f2}
 
+.login-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.login-kanan{
+    width: 100vw;
+}
+
+.login-image{
+   background-image: url('../img/login.jpg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position-x: center;
+   height: 500px;
+   margin-bottom: 30px;
+}
+
 footer{
     bottom: 0;
     width: 100%;
@@ -54,6 +75,25 @@ footer{
 
     .logo{
         width: 150px;
+    }
+
+    .login-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .login-kanan{
+        width: 50vw;
+    }
+    
+    .login-kiri{
+        width: 50vw;
+    }
+    
+    .login-image{
+       height: 900px;
     }
 
     footer{
