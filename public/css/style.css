@@ -31,7 +31,7 @@ table {
   
   tr:nth-child(even){background-color: #f2f2f2}
 
-.login-wrapper{
+.auth-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,17 +39,21 @@ table {
     background-color: white;
 }
 
-.login-kanan{
+.auth-kanan{
     width: 100vw;
 }
 
-.login-image{
-   background-image: url('../img/login.jpg');
+.auth-image{
+   background-image: url('../img/auth.jpg');
    background-size: contain;
    background-repeat: no-repeat;
    background-position-x: center;
    height: 500px;
-   margin-bottom: -100px;
+   margin-bottom: 30px;
+}
+
+.map-location{
+    margin: 50px 0px;
 }
 
 footer{
@@ -73,26 +77,31 @@ footer{
         margin-bottom: 0px;
     }
 
+    .header{
+        font-weight: bold;
+        font-size: 60px;
+    }
+
     .logo{
         width: 150px;
     }
 
-    .login-wrapper{
+    .auth-wrapper{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
     
-    .login-kanan{
+    .auth-kanan{
         width: 50vw;
     }
     
-    .login-kiri{
+    .auth-kiri{
         width: 50vw;
     }
     
-    .login-image{
+    .auth-image{
        height: 900px;
     }
 

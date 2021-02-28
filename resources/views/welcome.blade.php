@@ -23,7 +23,7 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="font-weight-bold">SELAMAT DATANG</h1>
+        <h1 class="header">SELAMAT DATANG</h1>
         <p class="lead">Segera buat akun anda dan daftarkan <br> ke aplikasi untuk
           menggunakan serta menikmati fitur yang tersedia</p>
         <a type="button" class="btn btn-primary" href="{{ route('register') }}">DAFTARKAN SEKARANG</a><br><br>
@@ -36,16 +36,16 @@
           <div class="">
             <div id="footer">
               <img class="logo" src="{{ asset('img/logo.png') }}">
-              <h5 class="">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
-                55143</h5>
+              <p class="mt-3">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
+                55143</p>
               <p>Telp : (0274) 6055655</p>
               <p>WA Area Jogja : 00000000000</p>
-              <p>Email : Cs@LifeMedia.id </p>
+              <p class="mt-3">Email : Cs@LifeMedia.id </p>
             </div>
           </div>
         </div>
 
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class=" text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
           <a class="text-white">Build With Love by UMY Intern Team</a>
           <a href='https://www.freepik.com/vectors/technology'>Technology vector created by stories -
             www.freepik.com</a>

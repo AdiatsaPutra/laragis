@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="map-location container-fluid">
+  <div class="row mb-3">
+    <h3 class="font-weight-bold">Masukkan Data Survey Lokasi</h3>
+  </div>
   <div class="row">
     <div class="col-md-4 mb-5">
       <form>
@@ -14,7 +17,7 @@
           </div>
           <div class="col-sm-6">
             <div class="mb-1">
-              <label for="longtitude" class="form-label">Longtitude</label>
+              <label class="form-label">Longtitude</label>
               <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude" id="lng">
             </div>
           </div>
@@ -92,8 +95,14 @@
           </div>
           <div class="col-sm-12">
             <div class="mb-1">
-              <label for="longtitude" class="form-label">Tanggal Disurvey</label>
+              <label class="form-label">Tanggal Disurvey</label>
               <input type="text" class="form-control" id="tgl">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-1">
+              <label class="form-label">Foto Lokasi</label>
+              <input type="file" class="form-control" id="foto">
             </div>
           </div>
           <div class="col-sm-12">

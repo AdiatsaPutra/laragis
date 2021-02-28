@@ -26,7 +26,6 @@
                 <div class="container">
                     <img class="logo" src="{{ asset('img/logo.png') }}">
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
@@ -72,11 +71,12 @@
                         <div class="">
                             <div id="footer">
                                 <img class="logo" src="{{ asset('img/logo.png') }}">
-                                <p class="">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI Yogyakarta
+                                <p class="mt-3">Jl. Parangtritis 97 RT 57 RW 15, Brontokusuman, Mergangsan, DI
+                                    Yogyakarta
                                     55143</p>
                                 <p>Telp : (0274) 6055655</p>
                                 <p>WA Area Jogja : 00000000000</p>
-                                <p>Email : Cs@LifeMedia.id </p>
+                                <p class="mt-3">Email : Cs@LifeMedia.id </p>
                             </div>
                         </div>
                     </div>

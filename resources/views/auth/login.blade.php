@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="login-wrapper">
-    <div class="login-kanan">
-        <div class="login-image"></div>
+<div class="auth-wrapper">
+    <div class="auth-kanan">
+        <div class="auth-image"></div>
     </div>
-    <div class="login-kiri mb-5">
+    <div class="auth-kiri mb-5">
         <form method="POST" action="{{ route('login') }}">
             @csrf
+            <div class="form-group row text-center">
+                <h3 class="font-weight-bold">Login</h3>
+                <p>Silakan Masukkan Data Anda</p>
+            </div>
             <div class="form-group row">
                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                 <div class="col-md-6">
