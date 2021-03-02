@@ -132,7 +132,7 @@
     const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
 
     // Initialize Mapbox View
-    mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWRpYXRzYSIsImEiOiJja2w1eWhlOXMxcHdxMnBvZXVkcmhnaXF6In0.kZ56zJwTnSp0r5VH3cIKEg';
     var map = new mapboxgl.Map({
         container: 'map',
         center: defaultLocation,
@@ -156,8 +156,31 @@
 
     });
 
+    const geoJson = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+            "type": "Feature",
+            "geometry": {
+                "coordinates": [
+                "110.36774955397762",
+                "-7.824041452653281"
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "locationId": 29,
+                "namalokasi": "Rumah saya Edit",
+                "image": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
+                "image2": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
+                "tipelokasi": "oke mantap Edit"
+            }
+            },
+        ]
+    }
+
     // Add Marker
-    const addMarkers = (geoJson) => {
+    const addMarkers = () => {
         geoJson.features.forEach((location) => {
             const {
                 geometry,
