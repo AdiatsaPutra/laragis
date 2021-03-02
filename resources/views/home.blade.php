@@ -12,75 +12,75 @@
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label for="lattitude" class="form-label">Lattitude</label>
-                            <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan Lattitude"
+                            <input wire:model="lat" type="text" class="form-control" placeholder="Masukkan Lattitude" name="lat"
                                 id="lat">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">Longtitude</label>
-                            <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude"
+                            <input wire:model="long" type="text" class="form-control" placeholder="Masukkan Longtitude" name="lng"
                                 id="lng">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label class="form-label">Nama Lokasi</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Nama lokasi">
+                            <input type="text" class="form-control" placeholder=" Masukan Nama lokasi" name="nama">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label class="form-label">Kategori</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Jenis Lokasi">
+                            <input type="text" class="form-control" placeholder=" Masukan Jenis Lokasi" name="kategori">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">RT</label>
-                            <input type="text" class="form-control" placeholder="Masukkan RT">
+                            <input type="text" class="form-control" placeholder="Masukkan RT" name="rt">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">RW</label>
-                            <input type="text" class="form-control" placeholder="Masukkan RW">
+                            <input type="text" class="form-control" placeholder="Masukkan RW" name="rw">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label class="form-label">Kelurahan</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Kelurahan">
+                            <input type="text" class="form-control" placeholder=" Masukan Kelurahan" name="kelurahan">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="mb-1">
                             <label class="form-label">Kecamatan</label>
-                            <input type="text" class="form-control" placeholder=" Masukan Kecamatan">
+                            <input type="text" class="form-control" placeholder=" Masukan Kecamatan" name="kecamatan">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">PIC 1</label>
-                            <input type="text" class="form-control" placeholder="Masukkan PIC 1">
+                            <input type="text" class="form-control" placeholder="Masukkan PIC 1" name="pic1">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">Telepon</label>
-                            <input type="text" class="form-control" placeholder="Masukan Telepon">
+                            <input type="text" class="form-control" placeholder="Masukan Telepon" name="telp1">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">PIC 2</label>
-                            <input type="text" class="form-control" placeholder="Masukkan PIC 2">
+                            <input type="text" class="form-control" placeholder="Masukkan PIC 2" name="pic2">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-1">
                             <label class="form-label">Telepon</label>
-                            <input type="text" class="form-control" placeholder="Masukan Telepon">
+                            <input type="text" class="form-control" placeholder="Masukan Telepon" name="telp2">
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -91,8 +91,7 @@
                         @endif
                         @else
                         <div class="mb-1">
-                            <input type="hidden" class="form-control" value="{{ Auth::user()->name }}"
-                                name="namasurveyor">
+                            <input type="hidden" class="form-control" value="{{ Auth::user()->name }}" name="namasurveyor">
                         </div>
                         @endguest
                     </div>
@@ -126,14 +125,14 @@
     </div>
 </div>
 
+
 @push('scripts')
 <script>
     // Default Lokasi Map
     const defaultLocation = ['110.36774955397762', '-7.824041452653281'];
 
     // Initialize Mapbox View
-    mapboxgl.accessToken = '{{ env('
-    MAPBOX_ACCESS_TOKEN ') }}';
+    mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
     var map = new mapboxgl.Map({
         container: 'map',
         center: defaultLocation,
@@ -157,33 +156,8 @@
 
     });
 
-    const geoJson = {
-        "type": "FeatureCollection",
-        "features": [{
-            "type": "Feature",
-            "geometry": {
-                "coordinates": [
-                    "110.36774955397762",
-                    "-7.824041452653281"
-                ],
-                "type": "Point"
-            },
-            "properties": {
-                "message": "Mantap",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "locationId": 30,
-                "namalokasi": "Kantor Polisi Di Sini",
-                "image": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
-                "image2": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
-                "tipelokasi": "Kantor Polisi"
-            }
-        }, ]
-    }
     // Add Marker
-    const addMarkers = () => {
+    const addMarkers = (geoJson) => {
         geoJson.features.forEach((location) => {
             const {
                 geometry,
