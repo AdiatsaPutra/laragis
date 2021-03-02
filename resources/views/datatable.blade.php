@@ -40,8 +40,8 @@
             <td>{{ $data->telp2 }}</td>
             <td>{{ $data->namasurveyor }}</td>
             <td>{{ $data->tanggal }}</td>
-            <td><img src="{{ $data->fotolokasi1 }}" style="width: 400px;" alt=""></td>
-            <td><img src="{{ $data->fotolokasi2 }}" style="width: 400px;" alt=""></td>
+            <td><img src="{{ $data->fotolokasi1 }}" style="width: 180px;" alt=""></td>
+            <td><img src="{{ $data->fotolokasi2 }}" style="width: 180px;" alt=""></td>
             @endforeach
         </tr>
     </table>
