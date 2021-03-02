@@ -154,8 +154,8 @@
             "type": "Feature",
             "geometry": {
               "coordinates": [
-                "106.73830754205",
-                "-6.2922403995615"
+                "110.36774955397762",
+                "-7.824041452653281"
               ],
               "type": "Point"
             },
@@ -166,9 +166,10 @@
                 50
               ],
               "locationId": 30,
-              "title": "Hello new",
-              "image": "1a1eb1e4106fff0cc3467873f0f39cab.jpeg",
-              "description": "Mantap"
+              "namalokasi": "Kantor Polisi Di Sini",
+              "image": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
+              "image2": "https://i0.wp.com/www.amazine.co/wp-content/uploads/2013/04/Gurita.jpg?resize=610%2C424",
+              "tipelokasi": "Kantor Polisi"
             }
           },
         ]
@@ -177,7 +178,7 @@
       const addMarkers = () => {
           geoJson.features.forEach((location) => {
           const {geometry, properties} = location;
-          const {message, iconSize, locationId, title, image, description} = properties;
+          const {message, iconSize, locationId, namalokasi, image, image2, tipelokasi} = properties;
   
           // Create a marker
           var el = document.createElement('div');
@@ -187,13 +188,38 @@
           el.style.backgroundSize = 'cover';
           el.style.width = '50px';
           el.style.height = '50px';
-  
+
+
+          let content = `<div style="overflow-y: auto; max-height:400px;width:100%;">
+                    <table class="table table-sm mt-2">
+                         <tbody>
+                            <tr>
+                                <td>Nama Lokasi</td>
+                                <td>${namalokasi}</td>
+                            </tr>
+                            <tr>
+                                <td>Foto 1</td>
+                                <td><img src="${image}" loading="lazy" class="img-fluid"/></td>
+                            </tr>
+                            <tr>
+                                <td>Foto 2</td>
+                                <td><img src="${image2}" loading="lazy" class="img-fluid"/></td>
+                            </tr>
+                            <tr>
+                                <td>Tipe Lokasi</td>         
+                                <td>${tipelokasi}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>`;
+
+          let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(content).setMaxWidth("400px");
+
           // Add to the map
           new mapboxgl.Marker(el)
-          .setLngLat(defaultLocation)
+          .setLngLat(geometry.coordinates)
+          .setPopup(popup)
           .addTo(map);
-  
-          
           });
       }
   

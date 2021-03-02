@@ -8,6 +8,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <title>Laravel</title>
@@ -23,10 +24,12 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="header">SELAMAT DATANG</h1>
-        <p class="lead">Segera buat akun anda dan daftarkan <br> ke aplikasi untuk
+        <h1 data-aos="fade-up" class="header">SELAMAT DATANG</h1>
+        <p data-aos="fade-up" class="lead">Segera buat akun anda dan daftarkan <br> ke aplikasi
+          untuk
           menggunakan serta menikmati fitur yang tersedia</p>
-        <a type="button" class="btn btn-primary" href="{{ route('register') }}">DAFTARKAN SEKARANG</a><br><br>
+        <a data-aos="fade-up" type="button" class="btn btn-primary" href="{{ route('register') }}">DAFTARKAN
+          SEKARANG</a><br><br>
       </div>
     </div>
 
@@ -57,6 +60,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
     </script>
 
   </body>
