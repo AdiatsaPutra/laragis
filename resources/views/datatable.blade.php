@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid" style="overflow-x:auto;">
+<div class="container-fluid mt-5 mb-5" style="overflow-x:auto;">
     <table>
         <tr>
             <th style="min-width: 180px;">Lattitude</th>
